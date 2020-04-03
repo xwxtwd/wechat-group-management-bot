@@ -1,0 +1,32 @@
+{
+  "name": "wechat-group-management-bot",
+  "version": "1.0.0",
+  "description": "Multiple groups of management tools",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xwxtwd/wechat-group-management-bot.git"
+  },
+  "keywords": [
+    "wechat",
+    "bot",
+    "group",
+    "manage"
+  ],
+  "author": "xwxtwd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xwxtwd/wechat-group-management-bot/issues"
+  },
+  "homepage": "https://github.com/xwxtwd/wechat-group-management-bot#readme",
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "sqlite": "^3.0.6",
+    "wechaty": "^0.32.5",
+    "wechaty-puppet-padplus": "^0.4.8"
+  }
+}

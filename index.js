@@ -7,7 +7,7 @@ const {
 } = require('wechaty');
 const PuppetPadplus = require('wechaty-puppet-padplus').default;
 
-const token = 'puppet_padplus_fe71c2c3d6aba480';
+const token = '你的token';
 
 const puppet = new PuppetPadplus({
   token,

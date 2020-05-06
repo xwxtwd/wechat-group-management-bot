@@ -1,4 +1,5 @@
-## 微信公共群组管理机器人
+## 微信公共群组管理机器人 [![Powered by Wechaty](https://img.shields.io/badge/Powered%20By-Wechaty-green.svg)](https://github.com/chatie/wechaty)[![Wechaty开源激励计划](https://img.shields.io/badge/Wechaty-开源激励计划-green.svg)](https://github.com/juzibot/Welcome/wiki/Everything-about-Wechaty)
+
 
 ### 适用场景：
 * 电商/微商营销社群

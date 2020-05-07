@@ -28,28 +28,23 @@ async function main (bot) {
         return `${item.date}: ${item.title}`;
       })
       .join('\n');
-    console.log(message);
     if (!message) return;
     const roomList = await bot.Room.findAll();
     for (let i = 0; i < roomList.length; i++) {
-      const room = roomList[i]
+      const room = roomList[i];
       if (await dbWatchGroup.getGroupIsWatch(room.id)) {
-        console.log(room);
+        room.say(`当年今日\n${message}`);
       }
     }
-    // roomList.forEach(room => {
-    //   room.say(`当年今日\n${message}`);
-    // });
   }
 }
 
 function scheduleObjectLiteralSyntax (bot) {
   const cfg = {second: 10, minute: 29, hour: [8]};
   console.log(`历史上的今天,配置:${JSON.stringify(cfg)}`);
-  main(bot);
-  // schedule.scheduleJob(cfg, function () {
-  //   main(bot);
-  // });
+  schedule.scheduleJob(cfg, function () {
+    main(bot);
+  });
 }
 
 exports = module.exports = scheduleObjectLiteralSyntax;

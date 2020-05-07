@@ -256,4 +256,4 @@ Temporary Items
 *.code-workspace
 *.memory-card.json
 
-/config/
+config/

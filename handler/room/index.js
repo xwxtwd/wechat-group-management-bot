@@ -43,6 +43,7 @@ exports = module.exports = async function (message) {
   const self = this.userSelf();
   const contentText = content.replace(new RegExp('@' + self.name() + '\\s'), '');
   const mentionedList = await message.mentionList();
+  console.log(contentText);
   // 查询该群组是否需要监控
   const roomIsWatch = await dbWatchGroup.getGroupIsWatch(room.id);
   if (roomIsWatch) {

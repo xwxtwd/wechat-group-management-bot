@@ -6,8 +6,9 @@ const {
   log
 } = require('wechaty');
 const PuppetPadplus = require('wechaty-puppet-padplus').default;
+const config = require('./config');
 
-const token = '你的token';
+const token = config.wechatyToken;
 
 const puppet = new PuppetPadplus({
   token,
@@ -28,3 +29,4 @@ EVENT_LIST.forEach(event => {
 bot.start()
   .then(() => log.info('StarterBot', 'Starter Bot Started.'))
   .catch(e => log.error('StarterBotCatchError', e));
+

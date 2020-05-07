@@ -1,4 +1,6 @@
 const dbGroup = require('../db/group');
+const scheduleObject = require('../schedule');
+
 exports = module.exports = async function onLogin (user) {
   const contact = this.userSelf();
   const roomList = await this.Room.findAll();
@@ -16,4 +18,6 @@ exports = module.exports = async function onLogin (user) {
       adminIdList: room.payload.adminIdList
     });
   });
+
+  scheduleObject.create(this)
 };

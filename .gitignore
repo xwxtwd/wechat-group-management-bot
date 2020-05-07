@@ -255,3 +255,5 @@ Temporary Items
 !.vscode/extensions.json
 *.code-workspace
 *.memory-card.json
+
+/config/

@@ -47,9 +47,17 @@ async function getGroupIsWatch (id) {
   return !!row
 }
 
+async function getAllGroupIsWatch () {
+  const db = await getDataBase();
+  const tableName = 'watchGroup';
+  const rows = await db.all(`SELECT * FROM ${tableName} WHERE needWatch = true`);
+  return rows
+}
+
 exports = module.exports = {
   insertGroup,
   dropGroup,
-  getGroupIsWatch
+  getGroupIsWatch,
+  getAllGroupIsWatch
 };
 

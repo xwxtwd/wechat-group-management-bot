@@ -1,6 +1,6 @@
 const {Wechaty, Message, Contact, MediaMessage, MiniProgram} = require('wechaty');
 const roomHandler = require('../handler/room');
-const commandHandler = require('../handler/command');
+const personHandler = require('../handler/person');
 exports = module.exports = function (message) {
   // 跳过自己
   if (message.self()) return false;
@@ -20,6 +20,6 @@ exports = module.exports = function (message) {
     roomHandler.call(this, message);
   } else {
     // 处理私聊命令
-    commandHandler.call(this, message);
+    personHandler.call(this, message);
   }
 };

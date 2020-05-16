@@ -27,7 +27,7 @@ async function blackListHandler (message) {
       groupId: room.id,
     });
     const informerNameList = mebmerBeReportedList.map(item => item.informerName);
-    if (mebmerBeReportedList.length > 3) {
+    if (mebmerBeReportedList.length >= 3) {
       const {advertisingNum, flauntNum, defaultNum} = await dbComplain.getMemberNumInfo(member.id);
       const numInfo = `数据库中累计被举报, 因：\n
 【广告】：${advertisingNum}次\n

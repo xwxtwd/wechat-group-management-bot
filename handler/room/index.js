@@ -8,6 +8,7 @@ const dbWatchGroup = require('../../db/watchGroup');
 const blackListHandler = require('./blackList');
 const blackListKeyword = ['/:MMWeak', '[弱]'];
 const adminKickKeyword = ['[再见]江湖再见'];
+const command = require('../command');
 
 // 检查是否触发关键词
 function triggerKeyword (content, keywordList) {
@@ -78,7 +79,7 @@ exports = module.exports = async function (message) {
                   } else {
                     const owner = await room.owner();
                     console.log(room.topic + '群主是' + owner.name());
-                    room.say(`请求群主把${mention.name()}请出群聊`, owner)
+                    room.say(`请求群主把${mention.name()}请出群聊`, owner);
                   }
                 }
               }
@@ -120,6 +121,8 @@ exports = module.exports = async function (message) {
         url: 'https://game.weixin.qq.com/cgi-bin/h5/static/smobaweekreport/index.html?ssid=1&partition=4046&from=singlemessage&isappinstalled=1',
       });
       return message.say(linkPayload);
+    } else if (command.returnWangZheRank(message)) {
+
     }
   } else {
     if (/机器人辅助/.test(contentText)) {

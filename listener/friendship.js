@@ -15,6 +15,7 @@ exports = module.exports = async function (friendship) {
           if (room) {
             try {
               await room.add(contact)
+              await room.sync()
               room.say('欢迎进入打卡群，将会在活动开始后提醒你每天打卡状态', contact)
             } catch(e) {
               console.error(e)
